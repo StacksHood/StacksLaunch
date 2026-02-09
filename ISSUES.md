@@ -9,8 +9,8 @@ Detailed development tasks for the StacksLaunch fundraising platform.
   - ✅ Defined detailed `campaigns` map with metadata and funding targets.
 - [x] **Issue #2**: Implement `create-campaign` Function
   - ✅ Added validation for duration, goal, and unique IDs.
-- [ ] **Issue #3**: Implement Contribution Logic
-  - Handle STX transfers and update campaign state.
+- [x] **Issue #3**: Implement Contribution Logic
+  - ✅ Handled STX transfers and updated campaign state with real-time tracking.
 
 ### Phase 2: Administrative Controls
 - [ ] **Issue #4**: Add Campaign Expiration Handling

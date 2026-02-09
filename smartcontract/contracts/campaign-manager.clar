@@ -36,7 +36,9 @@
 )
 
 (define-public (contribute-to-campaign (campaign-id uint) (amount uint))
-  (let ((campaign (unwrap! (map-get? campaigns campaign-id) (err u100))))
+  (let ((campaign (unwrap! (map-get? campaigns campaign-id) ERR-CAMPAIGN-NOT-FOUND)))
+    (asserts! (get active campaign) (err u105))
+    (asserts! (<= block-height (get deadline campaign)) ERR_EXPIRED)
     (try! (stx-transfer? amount tx-sender (as-contract tx-sender)))
     (map-set campaigns campaign-id (merge campaign { raised: (+ (get raised campaign) amount) }))
     (ok amount)
