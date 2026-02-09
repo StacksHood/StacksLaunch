@@ -1,12 +1,35 @@
-;; Campaign Manager
+;; StacksLaunch - Campaign Manager
+;; Decentralized fundraising orchestrator
+
+;; --- Data Maps and Vars ---
+
+(define-map campaigns
+  uint
+  {
+    title: (string-ascii 64),
+    creator: principal,
+    goal: uint,
+    raised: uint,
+    deadline: uint,
+    active: bool
+  }
+)
 
 (define-data-var next-campaign-id uint u1)
 
-(define-map campaigns uint { creator: principal, goal: uint, raised: uint, deadline: uint, active: bool })
+;; --- Constants ---
+(define-constant contract-owner tx-sender)
+(define-constant ERR-NOT-AUTHORIZED (err u100))
+(define-constant ERR-CAMPAIGN-NOT-FOUND (err u101))
+(define-constant ERR-EXPIRED (err u102))
 
-(define-public (create-campaign (goal uint) (deadline uint))
+;; --- Public Functions ---
+
+(define-public (create-campaign (title (string-ascii 64)) (goal uint) (deadline uint))
   (let ((campaign-id (var-get next-campaign-id)))
-    (map-set campaigns campaign-id { creator: tx-sender, goal: goal, raised: u0, deadline: deadline, active: true })
+    (asserts! (> goal u0) (err u103))
+    (asserts! (> deadline block-height) (err u104))
+    (map-set campaigns campaign-id { title: title, creator: tx-sender, goal: goal, raised: u0, deadline: deadline, active: true })
     (var-set next-campaign-id (+ campaign-id u1))
     (ok campaign-id)
   )
