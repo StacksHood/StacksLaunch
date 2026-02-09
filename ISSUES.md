@@ -5,10 +5,10 @@ Detailed development tasks for the StacksLaunch fundraising platform.
 ## 🛠️ Smart Contract Issues
 
 ### Phase 1: Core Campaign Logic
-- [ ] **Issue #1**: Implement Campaign Storage Map
-  - Define `campaigns` map with metadata and funding targets.
-- [ ] **Issue #2**: Implement `create-campaign` Function
-  - Add validation for duration and goal.
+- [x] **Issue #1**: Implement Campaign Storage Map
+  - ✅ Defined detailed `campaigns` map with metadata and funding targets.
+- [x] **Issue #2**: Implement `create-campaign` Function
+  - ✅ Added validation for duration, goal, and unique IDs.
 - [ ] **Issue #3**: Implement Contribution Logic
   - Handle STX transfers and update campaign state.
 
