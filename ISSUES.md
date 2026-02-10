@@ -15,10 +15,9 @@ Detailed development tasks for the StacksLaunch fundraising platform.
   - ✅ Handled STX transfers and updated campaign state with real-time tracking.
 
 ### Phase 2: Administrative & Safety
-- [ ] **Issue #4**: Add Campaign Expiration Handling
-  - [ ] Implement `check-campaign-status` helper.
-  - [ ] Assert `deadline > block-height` for new contributions.
-  - [ ] Implement `finalize-campaign` to handle goal success/failure.
+- [x] **Issue #4**: Add Campaign Expiration Handling
+  - ✅ Implemented `finalize-campaign` to handle goal success/failure.
+  - ✅ Asserted `deadline > block-height` for new contributions.
 - [ ] **Issue #5**: Implement Owner Role & Governance
   - [ ] Add `contract-owner` constant.
   - [ ] Implement `withdraw-protocol-fees` (Admin only).
