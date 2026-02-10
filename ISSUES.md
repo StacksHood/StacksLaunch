@@ -18,9 +18,9 @@ Detailed development tasks for the StacksLaunch fundraising platform.
 - [x] **Issue #4**: Add Campaign Expiration Handling
   - ✅ Implemented `finalize-campaign` to handle goal success/failure.
   - ✅ Asserted `deadline > block-height` for new contributions.
-- [ ] **Issue #5**: Implement Owner Role & Governance
-  - [ ] Add `contract-owner` constant.
-  - [ ] Implement `withdraw-protocol-fees` (Admin only).
+- [x] **Issue #5**: Implement Owner Role & Governance
+  - ✅ Implemented transferable `contract-owner` role.
+  - ✅ Added administrative `withdraw-protocol-fees` function.
 
 ---
 
