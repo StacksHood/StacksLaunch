@@ -1,6 +1,8 @@
-# StacksLaunch Roadmap & Issues
+# StacksLaunch - Roadmap & Issues
 
 Detailed development tasks for the StacksLaunch fundraising platform.
+
+---
 
 ## 🛠️ Smart Contract Issues
 
@@ -12,9 +14,14 @@ Detailed development tasks for the StacksLaunch fundraising platform.
 - [x] **Issue #3**: Implement Contribution Logic
   - ✅ Handled STX transfers and updated campaign state with real-time tracking.
 
-### Phase 2: Administrative Controls
+### Phase 2: Administrative & Safety
 - [ ] **Issue #4**: Add Campaign Expiration Handling
+  - [ ] Implement `check-campaign-status` helper.
+  - [ ] Assert `deadline > block-height` for new contributions.
+  - [ ] Implement `finalize-campaign` to handle goal success/failure.
 - [ ] **Issue #5**: Implement Owner Role & Governance
+  - [ ] Add `contract-owner` constant.
+  - [ ] Implement `withdraw-protocol-fees` (Admin only).
 
 ---
 
@@ -22,11 +29,23 @@ Detailed development tasks for the StacksLaunch fundraising platform.
 
 ### Phase 3: UI Foundation
 - [ ] **Issue #6**: Set up App Shell & Theme
-  - Implement dark/terminal theme with Stacks Orange.
+  - [ ] Implement Tailwind 4 "Terminal" configuration.
+  - [ ] Create `Navigation` and `Sidebar` layouts.
 - [ ] **Issue #7**: Wallet Connection Integration
-  - Connect `@stacks/connect` for signer authentication.
+  - [ ] Setup `StacksProvider` for session persistence.
+  - [ ] Add `ConnectWallet` button with address formatting.
 
 ### Phase 4: Feature Dashboards
 - [ ] **Issue #8**: Build Campaign Discovery Grid
+  - [ ] Create dynamic cards with goal progress visualization.
 - [ ] **Issue #9**: Build Campaign Detail View
+  - [ ] Dynamic routing for specific campaign IDs.
 - [ ] **Issue #10**: Implement Contribution Flow UI
+  - [ ] Modal-based contribution form with live validation.
+
+---
+
+## 📊 Priority Levels
+- **P0**: Core Engine, Wallet Auth
+- **P1**: Safety Guards, Discovery UI
+- **P2**: Creator Dashboard, Analytics
