@@ -3,6 +3,8 @@
 
 ;; --- Data Maps and Vars ---
 
+(define-data-var contract-owner principal tx-sender)
+
 (define-map campaigns
   uint
   {
@@ -18,12 +20,26 @@
 (define-data-var next-campaign-id uint u1)
 
 ;; --- Constants ---
-(define-constant contract-owner tx-sender)
 (define-constant ERR-NOT-AUTHORIZED (err u100))
 (define-constant ERR-CAMPAIGN-NOT-FOUND (err u101))
 (define-constant ERR-EXPIRED (err u102))
 
 ;; --- Public Functions ---
+
+(define-public (transfer-ownership (new-owner principal))
+  (begin
+    (asserts! (is-eq tx-sender (var-get contract-owner)) ERR-NOT-AUTHORIZED)
+    (ok (var-set contract-owner new-owner))
+  )
+)
+
+(define-public (withdraw-protocol-fees (amount uint) (recipient principal))
+  (begin
+    (asserts! (is-eq tx-sender (var-get contract-owner)) ERR-NOT-AUTHORIZED)
+    (try! (as-contract (stx-transfer? amount (as-contract tx-sender) recipient)))
+    (ok true)
+  )
+)
 
 (define-public (create-campaign (title (string-ascii 64)) (goal uint) (deadline uint))
   (let ((campaign-id (var-get next-campaign-id)))
