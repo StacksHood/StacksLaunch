@@ -27,16 +27,16 @@ Detailed development tasks for the StacksLaunch fundraising platform.
 ## 💻 Frontend Issues
 
 ### Phase 3: UI Foundation
-- [ ] **Issue #6**: Set up App Shell & Theme
-  - [ ] Implement Tailwind 4 "Terminal" configuration.
-  - [ ] Create `Navigation` and `Sidebar` layouts.
-- [ ] **Issue #7**: Wallet Connection Integration
-  - [ ] Setup `StacksProvider` for session persistence.
-  - [ ] Add `ConnectWallet` button with address formatting.
+- [x] **Issue #6**: Set up App Shell & Theme
+  - ✅ Implemented Tailwind 4 "Launch" configuration.
+  - ✅ Created `Navigation` and responsive layouts.
+- [x] **Issue #7**: Wallet Connection Integration
+  - ✅ Setup `StacksProvider` for session persistence.
+  - ✅ Implemented `ConnectWallet` button with address formatting.
 
 ### Phase 4: Feature Dashboards
-- [ ] **Issue #8**: Build Campaign Discovery Grid
-  - [ ] Create dynamic cards with goal progress visualization.
+- [x] **Issue #8**: Build Campaign Discovery Grid
+  - ✅ Created dynamic cards with goal progress visualization and filters.
 - [ ] **Issue #9**: Build Campaign Detail View
   - [ ] Dynamic routing for specific campaign IDs.
 - [ ] **Issue #10**: Implement Contribution Flow UI
