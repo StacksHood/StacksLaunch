@@ -8,12 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        launch: {
-          bg: "#0a0e27",
-          text: "#e0e0e0",
-          accent: "#64ff00",
-          dim: "#404040",
-        },
+        'stacks-orange': '#F2A900',
+        'terminal-black': '#0B0B0C',
+        'terminal-gray': '#1A1A1A',
+        'terminal-text': '#EDEDED',
       },
       fontFamily: {
         mono: ["'Courier New'", "monospace"],
