@@ -6,9 +6,7 @@ export default function Home() {
       <div className={styles.container}>
         <header className={styles.header}>
           <h1 className={styles.title}>STACKSLAUNCH</h1>
-          <p className={styles.subtitle}>
-            &gt; Trustless Fundraising Platform
-          </p>
+          <p className={styles.subtitle}>&gt; Trustless Fundraising Platform</p>
         </header>
 
         <section className={styles.hero}>

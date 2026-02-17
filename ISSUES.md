@@ -7,6 +7,7 @@ Detailed development tasks for the StacksLaunch fundraising platform.
 ## 🛠️ Smart Contract Issues
 
 ### Phase 1: Core Campaign Logic
+
 - [x] **Issue #1**: Implement Campaign Storage Map
   - ✅ Defined detailed `campaigns` map with metadata and funding targets.
 - [x] **Issue #2**: Implement `create-campaign` Function
@@ -15,6 +16,7 @@ Detailed development tasks for the StacksLaunch fundraising platform.
   - ✅ Handled STX transfers and updated campaign state with real-time tracking.
 
 ### Phase 2: Administrative & Safety
+
 - [x] **Issue #4**: Add Campaign Expiration Handling
   - ✅ Implemented `finalize-campaign` to handle goal success/failure.
   - ✅ Asserted `deadline > block-height` for new contributions.
@@ -27,6 +29,7 @@ Detailed development tasks for the StacksLaunch fundraising platform.
 ## 💻 Frontend Issues
 
 ### Phase 3: UI Foundation
+
 - [x] **Issue #6**: Set up App Shell & Theme
   - ✅ Implemented Tailwind 4 "Launch" configuration.
   - ✅ Created `Navigation` and responsive layouts.
@@ -35,6 +38,7 @@ Detailed development tasks for the StacksLaunch fundraising platform.
   - ✅ Implemented `ConnectWallet` button with address formatting.
 
 ### Phase 4: Feature Dashboards
+
 - [x] **Issue #8**: Build Campaign Discovery Grid
   - ✅ Created dynamic cards with goal progress visualization and filters.
 - [ ] **Issue #9**: Build Campaign Detail View
@@ -45,6 +49,7 @@ Detailed development tasks for the StacksLaunch fundraising platform.
 ---
 
 ## 📊 Priority Levels
+
 - **P0**: Core Engine, Wallet Auth
 - **P1**: Safety Guards, Discovery UI
 - **P2**: Creator Dashboard, Analytics
